@@ -148,7 +148,24 @@ body.no-py ruby rt{display:none}
 .backtop.show{display:flex}
 .toast{position:fixed;left:50%;bottom:80px;transform:translateX(-50%);z-index:70;background:rgba(46,42,34,.92);color:#fff;font-size:13px;padding:8px 18px;border-radius:999px;opacity:0;pointer-events:none;transition:.25s}
 .toast.show{opacity:1}
+/* ========== 回总站入口 / 更多经典 ========== */
+.brand-link{text-decoration:none;color:inherit}
+.brand-link:hover{color:var(--accent-deep)}
+.hub-back{display:inline-block;margin:0 0 8px;font-size:12px;color:var(--soft);text-decoration:none;letter-spacing:1px;border-bottom:1px dotted var(--soft);padding-bottom:1px}
+.hub-back:hover{color:var(--accent);border-color:var(--accent)}
 footer{padding:34px 0 46px;text-align:center;color:var(--soft);font-size:12px;line-height:2}
+footer .hub-foot a{color:var(--accent-deep);text-decoration:none;border-bottom:1px dotted var(--accent);font-size:13px}
+footer .hub-foot a:hover{color:var(--accent)}
+.tp-books{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tp-book{display:flex;flex-direction:column;gap:2px;padding:9px 12px;background:var(--paper);border:1px solid var(--line);border-radius:8px;text-decoration:none;color:var(--ink);transition:.15s}
+.tp-book:hover{border-color:var(--accent);background:#fff}
+.tp-book .tb-name{font-family:"STKaiti","KaiTi",serif;font-size:16px;letter-spacing:2px}
+.tp-book .tb-tag{font-size:11px;color:var(--soft)}
+.tp-book.cur{border-color:var(--accent);background:var(--accent-bg);cursor:default}
+.tp-book.cur .tb-tag{color:var(--accent-deep);font-weight:600}
+.tp-books .hub-all{grid-column:1/-1;text-align:center;padding:8px;font-size:13px;color:var(--accent-deep);text-decoration:none;border:1px dashed var(--accent);border-radius:8px}
+.tp-books .hub-all:hover{background:var(--accent-bg)}
+
 
 @media (max-width:640px){
   .toc ol{grid-template-columns:1fr}
@@ -513,7 +530,8 @@ p.wdg-date:first-child{margin-top:0}
 <div class="layout">
   <aside class="sidebar">
     <div class="sidebar-head">
-      <div class="brand">止学<small>共读</small></div>
+      <a class="hub-back" href="https://guoxue.aiyazone.com" title="返回国学经典共读总站">← 国学经典共读</a>
+      <a class="brand brand-link" href="https://guoxue.aiyazone.com" title="返回国学经典共读总站">止学<small>共读</small></a>
       <div class="sidebar-sub">目 录 · 十章</div>
     </div>
     <a href="#study" class="study-nav">研读 · 脉络 / 概念 / 名句</a>
@@ -540,7 +558,7 @@ p.wdg-date:first-child{margin-top:0}
   <div class="content">
     <header class="topbar">
       <div class="topbar-inner">
-        <div class="brand">止学<small>共读</small></div>
+        <a class="brand brand-link" href="https://guoxue.aiyazone.com" title="返回国学经典共读总站">止学<small>共读</small></a>
         <div class="top-actions">
           <button class="btn ghost nav-btn act-home" id="homeBtn" title="回到首页 / 封面">首页</button>
           <button class="btn ghost nav-btn act-study" id="studyBtn" title="研读专区">研读</button>
@@ -580,6 +598,11 @@ p.wdg-date:first-child{margin-top:0}
         <div class="tp-sec-t">今日安心签</div>
         <div class="tp-anshen" id="tpAnshenText"></div>
         <button class="btn block ghost" id="shareAnshen" type="button">分享这句</button>
+      </div>
+
+      <div class="tp-sec">
+        <div class="tp-sec-t">更多经典</div>
+        <div class="tp-books"><a class="tp-book" href="https://daxue.aiyazone.com"><span class="tb-name">大学</span><span class="tb-tag">四书 · 11 章</span></a><a class="tp-book" href="https://zhongyong.aiyazone.com"><span class="tb-name">中庸</span><span class="tb-tag">四书 · 33 章</span></a><span class="tp-book cur"><span class="tb-name">止学</span><span class="tb-tag">在读 · 道家 · 10 章</span></span><a class="tp-book" href="https://sushu.aiyazone.com"><span class="tb-name">素书</span><span class="tb-tag">道家 · 6 章</span></a><a class="tp-book" href="https://changduanjing.aiyazone.com"><span class="tb-name">长短经</span><span class="tb-tag">纵横 · 64 篇</span></a><a class="tp-book" href="https://bingjian.aiyazone.com"><span class="tb-name">冰鉴</span><span class="tb-tag">识人 · 7 篇</span></a><a class="hub-all" href="https://guoxue.aiyazone.com">📚 返回 国学经典共读 总站 →</a></div>
       </div>
     </div>
 
@@ -801,6 +824,7 @@ p.wdg-date:first-child{margin-top:0}
       <footer>
         <p>文本依据：维基文库《止学》简体版（隋·文中子著），属公有领域古籍。译文、串讲、解读等均为编者自撰。</p>
         <p>止学共读 · 一天一章 · 十天</p>
+              <p class="hub-foot"><a href="https://guoxue.aiyazone.com">📚 国学经典共读 · 更多经典 →</a></p>
       </footer>
     </div>
   </div>
